@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class VowelFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get user input
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        // Convert input to lowercase for easier comparison
+        String vowels = "aeiou";
+        System.out.print("Vowels found: ");
+        
+        for (char c : input.toLowerCase().toCharArray()) {
+            if (vowels.indexOf(c) != -1) {
+                System.out.print(c + " ");
+            }
+        }
+
+        scanner.close();
+    }
+}
